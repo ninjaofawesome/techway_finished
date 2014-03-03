@@ -14,27 +14,39 @@ class StaticPagesController < ApplicationController
     
     @client = Client.new(params[:client])
 
-    respond_to do |format|
-    if @client.save 
-        # redirect_to '/' 
-        # debugger 
-        format.html { redirect_to '/',  notice: 'Client was successfully created.' }
-        format.json { render json: @client, status: :created, location: @client }
-     else
-         format.html { render action: "new" }
-         format.json { render json: @client.errors, status: :unprocessable_entity }
+    # respond_to do |format|
+      if @client.save
+        if current_admin
+          redirect_to '/admin'
+        else
+          redirect_to '/'
+        end
+      else
+        render action: "new" 
       end
-      end 
-    end
+      # if current_admin
+      #   if @client.save 
+      #   # redirect_to '/' 
+      #   # debugger 
+      #     format.html { redirect_to '/admin',  notice: 'Client was successfully created.' }
+      #     format.json { render json: @client, status: :created, location: @client }
+      #   else
+      #      format.html { render action: "new" }
+      #      format.json { render json: @client.errors, status: :unprocessable_entity }
+      #   end
+      # else
+      #   if @client.save 
+      #   # redirect_to '/' 
+      #   # debugger 
+      #     format.html { redirect_to '/',  notice: 'Client was successfully created.' }
+      #     format.json { render json: @client, status: :created, location: @client }
+      #   else
+      #      format.html { render action: "new" }
+      #      format.json { render json: @client.errors, status: :unprocessable_entity }
+      #   end
+      # end
+    # end
   end
-
-
-  #     else
-  #       format.html { render action: "new" }
-  #       format.json { render json: @client.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
 
 
   def index
@@ -43,7 +55,7 @@ class StaticPagesController < ApplicationController
 
   end
 
-def show
+  def show
     @client = Client.find(params[:id])
 
     respond_to do |format|
@@ -53,3 +65,5 @@ def show
   end
 
 end
+
+
