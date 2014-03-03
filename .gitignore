@@ -1,5 +1,5 @@
-app/assets/stylesheets/.sass-cache/
+app/assets/stylesheets/.sass-cache
 
-*.scssc
+**/*.scssc
 
-*.log
+**/*.log
