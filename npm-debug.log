@@ -1,0 +1,184 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'hackerchat' ]
+2 info using npm@1.3.21
+3 info using node@v0.10.24
+4 verbose cache add [ 'hackerchat', null ]
+5 verbose cache add name=undefined spec="hackerchat" args=["hackerchat",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'hackerchat',
+6 verbose parsed url   path: 'hackerchat',
+6 verbose parsed url   href: 'hackerchat' }
+7 silly lockFile 1e60ccf2-hackerchat hackerchat
+8 verbose lock hackerchat /Users/Jahmil/.npm/1e60ccf2-hackerchat.lock
+9 silly lockFile 1e60ccf2-hackerchat hackerchat
+10 silly lockFile 1e60ccf2-hackerchat hackerchat
+11 verbose addNamed [ 'hackerchat', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 062d5782-hackerchat hackerchat@
+14 verbose lock hackerchat@ /Users/Jahmil/.npm/062d5782-hackerchat.lock
+15 silly addNameRange { name: 'hackerchat', range: '*', hasData: false }
+16 verbose url raw hackerchat
+17 verbose url resolving [ 'https://registry.npmjs.org/', './hackerchat' ]
+18 verbose url resolved https://registry.npmjs.org/hackerchat
+19 info trying registry request attempt 1 at 20:01:41
+20 http GET https://registry.npmjs.org/hackerchat
+21 info retry will retry, error on last attempt: Error: getaddrinfo ENOTFOUND
+22 info trying registry request attempt 2 at 20:01:51
+23 http GET https://registry.npmjs.org/hackerchat
+24 http 200 https://registry.npmjs.org/hackerchat
+25 silly registry.get cb [ 200,
+25 silly registry.get   { date: 'Thu, 27 Feb 2014 01:01:53 GMT',
+25 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B)',
+25 silly registry.get     etag: '"DNB3MXBV36SKV2O2AO2V8RIKX"',
+25 silly registry.get     'content-type': 'application/json',
+25 silly registry.get     via: '1.1 varnish',
+25 silly registry.get     'cache-control': 'max-age=1',
+25 silly registry.get     'content-length': '4958',
+25 silly registry.get     'accept-ranges': 'bytes',
+25 silly registry.get     age: '1583',
+25 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-jfk1029-JFK',
+25 silly registry.get     'x-cache': 'MISS, MISS',
+25 silly registry.get     'x-cache-hits': '0, 0',
+25 silly registry.get     'x-timer': 'S1393461330.254035950,VS0,VS91,VE103,VE1583391',
+25 silly registry.get     vary: 'Accept',
+25 silly registry.get     'keep-alive': 'timeout=10, max=50',
+25 silly registry.get     connection: 'Keep-Alive' } ]
+26 silly addNameRange number 2 { name: 'hackerchat', range: '*', hasData: true }
+27 silly addNameRange versions [ 'hackerchat', [ '0.0.1', '0.0.2', '0.0.3', '0.0.4' ] ]
+28 verbose addNamed [ 'hackerchat', '0.0.4' ]
+29 verbose addNamed [ '0.0.4', '0.0.4' ]
+30 silly lockFile 0890b507-hackerchat-0-0-4 hackerchat@0.0.4
+31 verbose lock hackerchat@0.0.4 /Users/Jahmil/.npm/0890b507-hackerchat-0-0-4.lock
+32 silly lockFile 90932333--hackerchat-hackerchat-0-0-4-tgz https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz
+33 verbose lock https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz /Users/Jahmil/.npm/90932333--hackerchat-hackerchat-0-0-4-tgz.lock
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz',
+34 verbose addRemoteTarball   '94647c02098b4781951489d5aab12c2f5657304c' ]
+35 info retry fetch attempt 1 at 20:01:53
+36 verbose fetch to= /var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz
+37 http GET https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz
+38 http 200 https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz
+39 verbose tar unpack /var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz
+40 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+41 verbose lock tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package /Users/Jahmil/.npm/e1b0a21d-13658-0-3028179188258946-package.lock
+42 silly lockFile 816bc2e6-13658-0-3028179188258946-tmp-tgz tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz
+43 verbose lock tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz /Users/Jahmil/.npm/816bc2e6-13658-0-3028179188258946-tmp-tgz.lock
+44 silly gunzTarPerm modes [ '755', '644' ]
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm extractEntry .npmignore
+47 silly gunzTarPerm extractEntry README.md
+48 silly gunzTarPerm extractEntry hackerchat-network.js
+49 silly gunzTarPerm extractEntry hackerchat.js
+50 silly gunzTarPerm extractEntry index.js
+51 silly gunzTarPerm extractEntry xbee.js
+52 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+53 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+54 silly lockFile 816bc2e6-13658-0-3028179188258946-tmp-tgz tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz
+55 silly lockFile 816bc2e6-13658-0-3028179188258946-tmp-tgz tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/tmp.tgz
+56 verbose tar pack [ '/Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz',
+56 verbose tar pack   '/var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package' ]
+57 verbose tarball /Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+58 verbose folder /var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+59 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+60 verbose lock tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package /Users/Jahmil/.npm/e1b0a21d-13658-0-3028179188258946-package.lock
+61 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+62 verbose lock tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz /Users/Jahmil/.npm/6277e5fe-npm-hackerchat-0-0-4-package-tgz.lock
+63 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+64 silly lockFile e1b0a21d-13658-0-3028179188258946-package tar:///var/folders/gv/bgr8vp8x2y9_dltzm8n9zql80000gp/T/npm-27513-xsPYOFgE/1393462913658-0.3028179188258946/package
+65 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+66 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+67 silly lockFile eeeec41e-mil-npm-hackerchat-0-0-4-package /Users/Jahmil/.npm/hackerchat/0.0.4/package
+68 verbose lock /Users/Jahmil/.npm/hackerchat/0.0.4/package /Users/Jahmil/.npm/eeeec41e-mil-npm-hackerchat-0-0-4-package.lock
+69 silly lockFile eeeec41e-mil-npm-hackerchat-0-0-4-package /Users/Jahmil/.npm/hackerchat/0.0.4/package
+70 silly lockFile eeeec41e-mil-npm-hackerchat-0-0-4-package /Users/Jahmil/.npm/hackerchat/0.0.4/package
+71 verbose tar unpack /Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+72 silly lockFile 81914151-mil-npm-hackerchat-0-0-4-package tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package
+73 verbose lock tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package /Users/Jahmil/.npm/81914151-mil-npm-hackerchat-0-0-4-package.lock
+74 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+75 verbose lock tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz /Users/Jahmil/.npm/6277e5fe-npm-hackerchat-0-0-4-package-tgz.lock
+76 silly gunzTarPerm modes [ '755', '644' ]
+77 silly gunzTarPerm extractEntry package.json
+78 silly gunzTarPerm extractEntry .npmignore
+79 silly gunzTarPerm extractEntry README.md
+80 silly gunzTarPerm extractEntry hackerchat-network.js
+81 silly gunzTarPerm extractEntry hackerchat.js
+82 silly gunzTarPerm extractEntry index.js
+83 silly gunzTarPerm extractEntry xbee.js
+84 silly lockFile 81914151-mil-npm-hackerchat-0-0-4-package tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package
+85 silly lockFile 81914151-mil-npm-hackerchat-0-0-4-package tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package
+86 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+87 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+88 verbose chmod /Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz 644
+89 verbose chown /Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz [ 502, 20 ]
+90 silly lockFile 90932333--hackerchat-hackerchat-0-0-4-tgz https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz
+91 silly lockFile 90932333--hackerchat-hackerchat-0-0-4-tgz https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz
+92 silly lockFile 0890b507-hackerchat-0-0-4 hackerchat@0.0.4
+93 silly lockFile 0890b507-hackerchat-0-0-4 hackerchat@0.0.4
+94 silly lockFile 062d5782-hackerchat hackerchat@
+95 silly lockFile 062d5782-hackerchat hackerchat@
+96 silly resolved [ { name: 'hackerchat',
+96 silly resolved     version: '0.0.4',
+96 silly resolved     description: 'A radio based distributed chat client',
+96 silly resolved     main: 'index.js',
+96 silly resolved     scripts: { test: 'mocha' },
+96 silly resolved     repository: { type: 'git', url: 'git://github.com/reconbot/hackerchat.git' },
+96 silly resolved     bin:
+96 silly resolved      { hackerchat: './hackerchat.js',
+96 silly resolved        'hackerchat-network': './hackerchat-network.js' },
+96 silly resolved     keywords: [ 'rf', 'xbee', 'chat' ],
+96 silly resolved     author: { name: 'Francis Gulotta', email: 'wizard@roborooter.com' },
+96 silly resolved     license: 'BSD-2-Clause',
+96 silly resolved     bugs: { url: 'https://github.com/reconbot/hackerchat/issues' },
+96 silly resolved     dependencies: { serialport: '~1.3.1', optimist: '~0.6.1', async: '~0.2.10' },
+96 silly resolved     readme: '# Hacker Chat\nThe WhatsApp for hackers.\n\n## Todo\n- Find out what WhatsApp is\n- How do you setup your Xbee?\n- Build Peer Discovery\n- Build Peer Messaging\n- Build Broadcast Messaging',
+96 silly resolved     readmeFilename: 'README.md',
+96 silly resolved     homepage: 'https://github.com/reconbot/hackerchat',
+96 silly resolved     _id: 'hackerchat@0.0.4',
+96 silly resolved     dist: { shasum: 'f4bd7f519767bf92abc974e9ea3a46ce66fc9905' },
+96 silly resolved     _from: 'hackerchat@',
+96 silly resolved     _resolved: 'https://registry.npmjs.org/hackerchat/-/hackerchat-0.0.4.tgz' } ]
+97 info install hackerchat@0.0.4 into /usr/local/lib
+98 info installOne hackerchat@0.0.4
+99 info /usr/local/lib/node_modules/hackerchat unbuild
+100 verbose tar unpack /Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+101 silly lockFile c1594ce1-ocal-lib-node-modules-hackerchat tar:///usr/local/lib/node_modules/hackerchat
+102 verbose lock tar:///usr/local/lib/node_modules/hackerchat /Users/Jahmil/.npm/c1594ce1-ocal-lib-node-modules-hackerchat.lock
+103 silly lockFile 6277e5fe-npm-hackerchat-0-0-4-package-tgz tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz
+104 verbose lock tar:///Users/Jahmil/.npm/hackerchat/0.0.4/package.tgz /Users/Jahmil/.npm/6277e5fe-npm-hackerchat-0-0-4-package-tgz.lock
+105 silly gunzTarPerm modes [ '755', '644' ]
+106 error Error: EACCES, mkdir '/usr/local/lib/node_modules/hackerchat'
+106 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/hackerchat']
+106 error   errno: 3,
+106 error   code: 'EACCES',
+106 error   path: '/usr/local/lib/node_modules/hackerchat',
+106 error   fstream_type: 'Directory',
+106 error   fstream_path: '/usr/local/lib/node_modules/hackerchat',
+106 error   fstream_class: 'DirWriter',
+106 error   fstream_stack:
+106 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+106 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+106 error      'Object.oncomplete (fs.js:107:15)' ] }
+107 error Please try running this command again as root/Administrator.
+108 error System Darwin 12.4.0
+109 error command "node" "/usr/local/bin/npm" "install" "-g" "hackerchat"
+110 error cwd /Users/Jahmil/BK000/Techway2.0
+111 error node -v v0.10.24
+112 error npm -v 1.3.21
+113 error path /usr/local/lib/node_modules/hackerchat
+114 error fstream_path /usr/local/lib/node_modules/hackerchat
+115 error fstream_type Directory
+116 error fstream_class DirWriter
+117 error code EACCES
+118 error errno 3
+119 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/hackerchat'
+120 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+120 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+120 error fstream_stack Object.oncomplete (fs.js:107:15)
+121 verbose exit [ 3, true ]

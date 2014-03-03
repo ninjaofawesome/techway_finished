@@ -1,0 +1,8 @@
+  <% @services.each do |service| %>
+      <tr>
+        <td><%= link_to service.id, service_path(service) %></td>
+        <td><%= service.name %></td>
+        <td><%= service.description %></td>
+      </tr>
+<% end %>
+

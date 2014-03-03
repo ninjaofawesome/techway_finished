@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Techway</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+
+  	 <div class="navbar-header">
+  	 	 <ul class="nav navbar-nav navbar-right">
+  	 	 	<li class="nav"><a href="https://www.facebook.com/techway718?ref=br_tf"><%= fa_icon "facebook lg" %></a></li>
+	        <li class="nav"><a href="https://twitter.com/TechwayNY"><%= fa_icon "twitter lg" %></a></li>
+          <li class="nav"><a href="mailto:jgraham109@hotmail.com"><%= fa_icon "envelope lg" %></a></li>
+	     </ul>
+  	 </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+  <div class = "container">
+    <div class = "row">
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>
