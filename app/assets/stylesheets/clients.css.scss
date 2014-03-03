@@ -1,3 +1,147 @@
 // Place all the styles related to the Clients controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "font-awesome";
+//variables
+// BACKGROUND COLOR: WHITE
+// BUTTON COLOR: LIGHT GRAY
+// BUTTON COLOR TEXT: MEDIUM GRAY
+// SOCIAL MEDIA BUTTON: POP GREEN
+// NAVBAR: MEDIUM GRAY
+// TEXT: BLACK
+
+@font-face {
+  font-family: 'Enigmatic';
+  src:font-url('app/assets/fonts/enigmatic/enigma-webfont.eot');
+  src:font-url('app/assets/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('app/assets/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
+      font-url('app/assets/fonts/enigmatic/enigma-webfont.woff') format('woff'),
+      font-url('app/assets/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$white: #f6f6f5;
+$lt-gray: #b6b8b5;
+$dk-gray: #676964;
+$black: #020700;
+$dk-green: #163000;
+$pop-green: #244b00;
+$lt-green: #3f8102;
+
+//BODY
+
+.scrollbar {
+	max-height: 600px;
+    overflow-y:scroll;
+}
+
+.sidebar-style {
+	background-color: $lt-gray;
+	border-radius: 10%;
+	padding: 2%;
+	// min-height: 700px;
+}
+
+.header-style {
+	background-color: $dk-gray;
+}
+
+
+
+//FONTS
+
+.title {
+	font-weight: 900;
+	color: $white;
+	padding: 1% 1%;
+	width: 100%;
+}
+
+.centered {
+	text-align: center;
+	color: $white;
+}
+
+//BUTTONS
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none;
+}
+
+.btn:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.btn:hover,
+.btn:focus {
+  color: $white;
+  text-decoration: none;
+}
+
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-default {
+  color: $dk-gray;
+  background-color: $white;
+  border-color: $dk-gray;
+}
+
+
+
+.btn-primary {
+  color: $white;
+  background-color: $lt-green;
+  border-color: $dk-gray;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+  color: $white;
+  background-color: $pop-green;
+  border-color: $dk-gray;
+}
+
+//spacing
+.moveit {
+	margin: 0 2%;
+}

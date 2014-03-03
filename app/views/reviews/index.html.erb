@@ -1,25 +1,68 @@
-<h1>Listing reviews</h1>
+<div class = "col-md-12">
+  <div class = "header-style">
+    <h1 class = "title">DASHBOARD</h1>
+  </div>
+  <div class = "bump">
+    <% if notice %>
+      <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
+      <p class="navbar-text pull-right">
+    <% if admin_signed_in? %>
+      Logged in as <strong><%= current_admin.email %></strong>.
+      <%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+      <% else %>
+      <%= link_to "Sign up", admin_registration_path, :class => 'navbar-link'  %> |
+      <%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
+    <% end %>
+  </div>
+</div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Review</th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class = "row">
+  <div class = "col-md-3">
+    <div class = "sidebar-style">
+      <h1>DASHBOARD OPTIONS</h1>
+        <ul class="nav">
+          <li class="active"><%= link_to 'Home', admin_path %></li>
+          <li class="active"><a href="/static_pages/new"> Add New Client</a></li>  
+          <li class="active"><a href="/services">Manage Services</a></li>  
+        </ul>
+    </div>
+  </div>
 
-<% @reviews.each do |review| %>
-  <tr>
-    <td><%= review.name %></td>
-    <td><%= review.email %></td>
-    <td><%= review.review %></td>
-    <td><%= review.active %></td>
-    <td><%= link_to 'Show', review_path(review) %></td>
-    <td><%= link_to 'Edit', edit_review_path(review) %></td>
-     
-  </tr>
-<% end %>
-</table>
+  <div class = "col-md-9">
+    <h1>REVIEWS</h1>
+    <div class = "scrollbar">
 
-<%= link_to 'Home', admin_path %>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Review</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+
+      <% @reviews.each do |review| %>
+        <tr>
+          <td><%= review.name %></td>
+          <td><%= review.email %></td>
+          <td><%= review.review %></td>
+          <td><%= review.active %></td>
+          <div class = "moveit"><td><button type="button" class="btn btn-default"><%= link_to 'Show', review_path(review) %></button></td></div>
+          <div class = "moveit"><td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_review_path(review) %></button></td></div>
+           
+        </tr>
+      <% end %>
+      </table>
+
+      
+    
+    </div>
+  </div>
+</div>
+
+

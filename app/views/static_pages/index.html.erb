@@ -21,7 +21,7 @@
 
 <div class = "row">
 
-    <div class = "span4">
+    <div class = "col-md-4">
       <h2> Services </h2>
         <% @services.each do |service| %>
         <b><%= service.name %></b>
@@ -33,7 +33,7 @@
     </div>
 
 
-    <div class = "span4">
+    <div class = "col-md-4">
       <h2> Reviews On The Fly! </h2>
       <% @reviews.each do |review| %>
       <tr>
@@ -45,7 +45,7 @@
       <% end %>
     </div>
 
-    <div class = "span4">
+    <div class = "col-md-4">
       <h2>Contact Us!</h2>
       <button class ="t-button-large"><%= link_to 'Contact Us', new_static_page_path %></button>
     </div>

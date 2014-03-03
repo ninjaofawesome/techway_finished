@@ -1,6 +1,44 @@
-<h1>Editing services</h1>
+<div class = "col-md-12">
+	<div class = "header-style">
+		<h1 class = "title">EDIT SERVICES</h1>
+	</div>
+	<div class = "bump">
+		<% if notice %>
+			<p class="alert alert-notice"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+			<p class="alert alert-error"><%= alert %></p>
+		<% end %>
+			<p class="navbar-text pull-right">
+		<% if admin_signed_in? %>
+			Logged in as <strong><%= current_admin.email %></strong>.
+			<%= link_to 'Edit profile', edit_admin_registration_path, :class => 'navbar-link' %> |
+			<%= link_to "Logout", destroy_admin_session_path, method: :delete, :class => 'navbar-link'  %>
+			<% else %>
+			<%= link_to "Sign up", admin_registration_path, :class => 'navbar-link'  %> |
+			<%= link_to "Login", new_admin_session_path, :class => 'navbar-link'  %>
+		<% end %>
+	</div>
+</div>
 
-<%= render 'form' %>
+<div class = "row">
+	<div class = "col-md-3">
+		<div class = "sidebar-style">
+			<h1>DASHBOARD OPTIONS</h1>
+				<ul class="nav">
+					<li class="active"><a href="/admin">Home</a></li>
+					<li class="active"><a href="/static_pages/new"> Add New Client</a></li>  
+					<li class="active"><a href="/reviews">Manage Reviews</a></li>  
+				</ul>
+		</div>
+	</div>
 
-<%= link_to 'Show', service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+	<div class = "col-md-9">
+
+		<h1>EDIT SERVICES</h1>
+
+		<%= render 'form' %>
+
+		<button type="button" class="btn btn-default"><%= link_to 'Show', service_path(@service) %></button> |
+		<button type="button" class="btn btn-default"><%= link_to 'Back', services_path %></button>
+	</div>
