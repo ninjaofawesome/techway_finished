@@ -17,9 +17,13 @@ class StaticPagesController < ApplicationController
     # respond_to do |format|
       if @client.save
         if current_admin
-          redirect_to '/admin'
+          flash[:alert] = "Client successfully added."
+          redirect_to '/admin' 
+          
         else
+          flash[:alert] = "Thanks!  We'll get back to you shortly."
           redirect_to '/'
+
         end
       else
         render action: "new" 
