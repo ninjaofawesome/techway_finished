@@ -147,6 +147,32 @@ fieldset[disabled] .btn {
 }
 
 //fader
-.quotes{
+// .quotes{
+// 	display: none;
+// }
+
+li{
+	list-style-type: none;
+}
+li.faderName {
+	display: block;
+}
+li.faderReview {
+	display: block;
+}
+
+li.hideMe {
 	display: none;
 }
+
+// li.hideReview {
+// 	display: none;
+// }
+
+// .fader {
+// 	display: none;
+// }
+
+// .hideMe {
+// 	display: none;
+// }
