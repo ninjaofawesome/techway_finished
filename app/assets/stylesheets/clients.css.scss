@@ -13,11 +13,11 @@
 
 @font-face {
   font-family: 'Enigmatic';
-  src:font-url('app/assets/fonts/enigmatic/enigma-webfont.eot');
-  src:font-url('app/assets/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
-      font-url('app/assets/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
-      font-url('app/assets/fonts/enigmatic/enigma-webfont.woff') format('woff'),
-      font-url('app/assets/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
+  src:font-url('/fonts/enigmatic/enigma-webfont.eot');
+  src:font-url('/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
+      url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
+      url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -144,4 +144,9 @@ fieldset[disabled] .btn {
 //spacing
 .moveit {
 	margin: 0 2%;
+}
+
+//fader
+.quotes{
+	display: none;
 }

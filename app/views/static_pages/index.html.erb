@@ -22,24 +22,19 @@
 <div class = "row">
 
     <div class = "col-md-4">
-      <h2> Services </h2>
-        <% @services.each do |service| %>
-        <b><%= service.name %></b>
-        <br>
-        <%= service.description %>
-        <br>
-      <% end %>
+      <h2>SERVICES</h2>
+       <p>Techway is here for all your PC computer repair and maintenance needs.  Check out our services!</p>
        <button class ="t-button-large"><%= link_to 'Our Services',  services_client_path %></button>
     </div>
 
 
     <div class = "col-md-4">
-      <h2> Reviews On The Fly! </h2>
+      <h2>OUR CLIENTS SAID... </h2>
       <% @reviews.each do |review| %>
-      <tr>
-      <td><%= review.name %></td>
+      <tr id = "fader">
+      <td class = "quotes"><%= review.name %></td>
       <br>
-      <td><%= review.review %></td>
+      <td class = "quotes"><%= review.review %></td>
       <br>
       </tr>
       <% end %>
@@ -47,6 +42,7 @@
 
     <div class = "col-md-4">
       <h2>Contact Us!</h2>
+      <p>Techway is here 24/7 to help.  Get in touch!</p>
       <button class ="t-button-large"><%= link_to 'Contact Us', new_static_page_path %></button>
     </div>
 
