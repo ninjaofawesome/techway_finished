@@ -55,7 +55,7 @@ class StaticPagesController < ApplicationController
 
   def index
     @services = Service.all
-    @reviews = Review.where(:active => true)
+    @reviews = Review.where(:active => true).limit(5)
 
   end
 
