@@ -1,0 +1,39 @@
+@import "font-awesome";
+//variables
+// BACKGROUND COLOR: WHITE
+// BUTTON COLOR: LIGHT GRAY
+// BUTTON COLOR TEXT: MEDIUM GRAY
+// SOCIAL MEDIA BUTTON: POP GREEN
+// NAVBAR: MEDIUM GRAY
+// TEXT: BLACK
+
+@font-face {
+  font-family: 'Enigmatic';
+  src:font-url('/fonts/enigmatic/enigma-webfont.eot');
+  src:font-url('/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
+      url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
+      url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
+      url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$white: #f6f6f5;
+$lt-gray: #b6b8b5;
+$dk-gray: #676964;
+$black: #020700;
+$dk-green: #163000;
+$pop-green: #244b00;
+$lt-green: #3f8102;
+
+//BODY
+
+.service-box {
+	min-height: 30%;
+	text-align: centered;
+}
+
+.scrollbar {
+	max-height: 600px;
+    overflow-y:scroll;
+}
