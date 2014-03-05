@@ -52,8 +52,7 @@
           <td><%= review.email %></td>
           <td><%= review.review %></td>
           <td><%= review.active %></td>
-          <div class = "moveit"><td><button type="button" class="btn btn-default"><%= link_to 'Show', review_path(review) %></button></td></div>
-          <div class = "moveit"><td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_review_path(review) %></button></td></div>
+          <td><button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_review_path(review) %></button></td>
            
         </tr>
       <% end %>

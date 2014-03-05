@@ -1,9 +1,15 @@
+<div class = "row">
+	<div class = "col-md-10">
+		<h1 class = "savingsbondtitle">OUR SERVICES </H1>
+	</div>
+</div>
+
 <% @services.each do |service| %>
 	<div class = "col-md-4 col-md-offset-1">
 		<div class = "service-box">
 			<tr>
 				<td><h3 class = "service-title"><%= service.name %></h3></td>
-				<td><div class ="services"><%= service.description %></div></td>
+				<td><p><%= service.description %></p></td>
 			</tr>
 		</div>
 	</div>

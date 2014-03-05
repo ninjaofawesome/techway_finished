@@ -1,16 +1,23 @@
 
 <div class = "row">
-<div id="myCarousel" class="carousel slide">
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item"> 
-      <%= image_tag "TNY_HeroLogo.jpg" %>
-    </div>
-    <div class="item">
-      <%= image_tag "TNY_Hero_placesaver.jpg" %>
-    </div>
-    <div class="item">
-      <%= image_tag "TNY_Hero_placesaver2.jpg" %>
+  <div class = "col-md-10 col-md-offset-2">
+    <%= image_tag "tny_smaller.jpg" %>
+  </div>
+
+
+<div class = "col-md-6 col-md-offset-3">
+  <div id="myCarousel" class="carousel slide">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <div class="active item"> 
+        <h1 class = "savingsbond">PC Repair Experts</h1>
+      </div>
+      <div class="item">
+       <h1 class = "savingsbond">Quality Service</h1>
+      </div>
+      <div class="item">
+        <h1 class = "savingsbond">Affordable Prices</h1>
+      </div>
     </div>
   </div>
   
@@ -40,6 +47,7 @@
     <div class = "col-md-4">
       <h2>Contact Us!</h2>
       <p>Techway is here 24/7 to help.  Get in touch!</p>
+      <br>
       <button class ="t-button-large"><%= link_to 'Contact Us', new_static_page_path %></button>
     </div>
 

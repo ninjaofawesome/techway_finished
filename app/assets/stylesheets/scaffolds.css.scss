@@ -67,3 +67,25 @@ div {
     list-style: square;
   }
 }
+
+//LISTS
+.service-box {
+  height: 150px;
+  text-align: centered;
+}
+
+.scrollbar {
+  max-height: 600px;
+    overflow-y:scroll;
+}
+
+//TEXT AREA
+
+textarea {
+  width: 250px;
+  height: 100px;
+}
+
+*:focus {
+    outline: 0;
+}

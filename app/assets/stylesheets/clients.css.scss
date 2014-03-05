@@ -15,12 +15,35 @@
   font-family: 'Enigmatic';
   src:font-url('/fonts/enigmatic/enigma-webfont.eot');
   src:font-url('/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
-      url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
-      url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
+      font-url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
+      font-url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Savings Bond';
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot');
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.woff') format('woff'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hasteristico';
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot');
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.woff') format('woff'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 $white: #f6f6f5;
 $lt-gray: #b6b8b5;
@@ -29,6 +52,35 @@ $black: #020700;
 $dk-green: #163000;
 $pop-green: #244b00;
 $lt-green: #3f8102;
+
+//fonts
+p {
+  font-family: 'Hasteristico', arial, helvetica, sans-serif;
+  color: $black;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Enigmatic', Helvetica, Arial, sans-serif;
+  color: $dk-green;
+}
+
+h1.savingsbond,h2.savingsbond,h3.savingsbond,h4.savingsbond,h5.savingsbond,h6.savingsbond {
+  font-family: 'Savings Bond', Helvetica, Arial, sans-serif;
+  color: $dk-green;
+  font-size: 500%;
+}
+
+
+.title {
+  font-weight: 900;
+  color: $white;
+  padding: 1% 1%;
+  width: 100%;
+}
+
+.centered {
+  text-align: center;
+  color: $white;
+}
 
 //BODY
 
@@ -48,21 +100,6 @@ $lt-green: #3f8102;
 	background-color: $dk-gray;
 }
 
-
-
-//FONTS
-
-.title {
-	font-weight: 900;
-	color: $white;
-	padding: 1% 1%;
-	width: 100%;
-}
-
-.centered {
-	text-align: center;
-	color: $white;
-}
 
 //BUTTONS
 .btn {
@@ -86,35 +123,10 @@ $lt-green: #3f8102;
           user-select: none;
 }
 
-.btn:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-}
-
 .btn:hover,
 .btn:focus {
   color: $white;
   text-decoration: none;
-}
-
-.btn:active,
-.btn.active {
-  background-image: none;
-  outline: 0;
-  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-}
-
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: 0.65;
-  filter: alpha(opacity=65);
-  -webkit-box-shadow: none;
-          box-shadow: none;
 }
 
 .btn-default {
@@ -141,38 +153,29 @@ fieldset[disabled] .btn {
   border-color: $dk-gray;
 }
 
-//spacing
-.moveit {
-	margin: 0 2%;
-}
-
-//fader
-// .quotes{
-// 	display: none;
-// }
+//LISTS
 
 li{
 	list-style-type: none;
 }
-li.faderName {
-	display: block;
-}
-li.faderReview {
-	display: block;
-}
 
-li.hideMe {
-	display: none;
+.service-box {
+  height: 150px;
+  text-align: centered;
 }
 
-// li.hideReview {
-// 	display: none;
-// }
+.scrollbar {
+  max-height: 600px;
+    overflow-y:scroll;
+}
 
-// .fader {
-// 	display: none;
-// }
+//TEXT AREA
 
-// .hideMe {
-// 	display: none;
-// }
+textarea {
+  width: 250px;
+  height: 100px;
+}
+
+*:focus {
+    outline: 0;
+}

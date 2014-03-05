@@ -22,6 +22,29 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Savings Bond';
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot');
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.woff') format('woff'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hasteristico';
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot');
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.woff') format('woff'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 $white: #f6f6f5;
 $lt-gray: #b6b8b5;
 $dk-gray: #676964;
@@ -31,9 +54,21 @@ $pop-green: #244b00;
 $lt-green: #3f8102;
 
 //fonts
+p {
+  font-family: 'Hasteristico', arial, helvetica, sans-serif;
+  color: $black;
+  font-weight: 900;
+}
+
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Enigmatic', georgia, serif;
+  font-family: 'Enigmatic', Helvetica, Arial, sans-serif;
   color: $dk-green;
+}
+
+h1.savingsbond,h2.savingsbond,h3.savingsbond,h4.savingsbond,h5.savingsbond,h6.savingsbond {
+  font-family: 'Savings Bond', Helvetica, Arial, sans-serif;
+  color: $dk-green;
+  font-size: 500%;
 }
 
 //general
@@ -44,7 +79,8 @@ body{
 }
 
 .navbar {
-	background-color: $lt-gray;
+	// background-color: $lt-gray;
+  border: none;
 }
 
 //buttons
@@ -58,13 +94,16 @@ button {
 .t-button-large {
   font-size: 125%;
   padding: 10px 15px;
+  box-shadow: none;
+  border: none;
+  color: $dk-gray;
 }
 
 //navbar
 
 .navbar
 .nav > li > a {
-	color: $dk-green;
+	color: $dk-gray;
 	text-shadow: none;
 }
 
@@ -222,4 +261,27 @@ button {
 .carousel-caption p {
   margin-bottom: 0;
 }
+
+//LISTS
+.service-box {
+  height: 150px;
+  text-align: centered;
+}
+
+.scrollbar {
+  max-height: 600px;
+    overflow-y:scroll;
+}
+
+//TEXT AREA
+
+textarea {
+  width: 250px;
+  height: 100px;
+}
+
+*:focus {
+    outline: 0;
+}
+
 

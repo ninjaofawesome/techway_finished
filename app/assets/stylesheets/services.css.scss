@@ -11,12 +11,35 @@
   font-family: 'Enigmatic';
   src:font-url('/fonts/enigmatic/enigma-webfont.eot');
   src:font-url('/fonts/enigmatic/enigma-webfont.eot?#iefix') format('embedded-opentype'),
-      url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
-      url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
-      url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
+      font-url('/fonts/enigmatic/enigma-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/enigmatic/enigma-webfont.woff') format('woff'),
+      font-url('/fonts/enigmatic/enigma-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Savings Bond';
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot');
+  src:font-url('/fonts/savingsbond/savingsb_-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.woff') format('woff'),
+      font-url('/fonts/savingsbond/savingsb_-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hasteristico';
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot');
+  src:font-url('/fonts/hasterico/hasteristicobold-webfont.eot?#iefix') format('embedded-opentype'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.svg#icomoon') format('svg'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.woff') format('woff'),
+      font-url('/fonts/hasterico/hasteristicobold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 $white: #f6f6f5;
 $lt-gray: #b6b8b5;
@@ -26,14 +49,47 @@ $dk-green: #163000;
 $pop-green: #244b00;
 $lt-green: #3f8102;
 
+//fonts
+p {
+  font-family: 'Hasteristico', arial, helvetica, sans-serif;
+  color: $black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Enigmatic', Helvetica, Arial, sans-serif;
+  color: $dk-green;
+}
+
+h1.savingsbond,h2.savingsbond,h3.savingsbond,h4.savingsbond,h5.savingsbond,h6.savingsbond {
+  font-family: 'Savings Bond', Helvetica, Arial, sans-serif;
+  color: $pop-green;
+  font-size: 500%;
+}
+h1.savingsbondtitle,h2.savingsbondtitle,h3.savingsbondtitle,h4.savingsbondtitle,h5.savingsbondtitle,h6.savingsbondtitle {
+  font-family: 'Savings Bond', Helvetica, Arial, sans-serif;
+  color: $pop-green;
+  font-size: 500%;
+  text-align: center;
+}
 //BODY
 
 .service-box {
-	min-height: 30%;
+  height: 150px;
 	text-align: centered;
 }
 
 .scrollbar {
 	max-height: 600px;
     overflow-y:scroll;
+}
+
+//TEXT AREA
+
+textarea {
+  width: 250px;
+  height: 100px;
+}
+
+*:focus {
+    outline: 0;
 }
