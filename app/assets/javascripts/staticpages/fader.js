@@ -1,5 +1,37 @@
 console.log('fader loaded');	
 
+function InOut( elem )
+{
+ elem.delay()
+     .fadeIn(2000)
+     .delay()
+     .fadeOut( 
+               function(){ 
+                   if(elem.next().length > 0)
+                   {InOut( elem.next() );}
+                   else
+                   {InOut( elem.siblings(':first'));}
+                         
+                 }
+             );
+}
+
+$(function(){
+$('#content li').hide();
+InOut( $('#content li:first') );
+
+});
+
+
+// THIS IS THE BEST WORKING ONE YET.  USE WITH THIS FOR THE UL 
+// <li class= "faderReview" >"<%= review.review %>"</li>
+// <li class= "faderName" >-<%= review.name %></li> 
+
+// window.setInterval(function(){ 
+// 	$('li.faderName').first().removeClass('faderName').addClass('hideMe')
+//     $('li.faderReview').first().removeClass('faderReview').addClass('hideMe')
+// }, 1000);
+
 // var counter = 0;
 // var i = setInterval(function(){             
 //     $('li.faderName').first().fadeOut('faderName').fadeIn('showName')
@@ -9,14 +41,6 @@ console.log('fader loaded');
 //         clearInterval(i);
 //     }
 // }, 5000);
-
-
-
-window.setInterval(function(){ 
-	$('li.faderName').first().removeClass('faderName').addClass('hideMe')
-    $('li.faderReview').first().removeClass('faderReview').addClass('hideMe')
-}, 1000);
-
 
 //kind of works!
 // window.setInterval( function() {

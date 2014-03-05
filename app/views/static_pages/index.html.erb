@@ -30,11 +30,9 @@
 
     <div class = "col-md-4">
       <h2>OUR CLIENTS SAID... </h2>
-       
-       <ul>
+       <ul id= "content">
         <% @reviews.each do |review| %>
-            <li class= "faderReview" >"<%= review.review %>"</li>
-            <li class= "faderName" >-<%= review.name %></li>    
+            <li>"<%= review.review %>"-<%= review.name %></li>   
         <% end %>
       </ul>
     </div>
