@@ -4,7 +4,7 @@ function InOut( elem )
 {
  elem.delay()
      .fadeIn(2000)
-     .delay(3000)
+     .delay()
      .fadeOut( 
                function(){ 
                    if(elem.next().length > 0)
