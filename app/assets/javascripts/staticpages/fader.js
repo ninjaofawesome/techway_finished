@@ -1,15 +1,13 @@
 console.log('fader loaded');	
 
-function InOut( elem )
-{
+function InOut( elem ) {
  elem.delay()
      .fadeIn(2000)
      .delay()
-     .fadeOut( 
-               function(){ 
-                   if(elem.next().length > 0)
-                   {InOut( elem.next() );}
-                   else
+     .fadeOut(function(){ 
+                   if(elem.next().length > 0){
+                    InOut( elem.next() );
+                  } else
                    {InOut( elem.siblings(':first'));}
                          
                  }
@@ -17,8 +15,8 @@ function InOut( elem )
 }
 
 $(function(){
-$('#content li').hide();
-InOut( $('#content li:first') );
+  $('#content li').hide();
+  InOut( $('#content li:first') );
 
 });
 
