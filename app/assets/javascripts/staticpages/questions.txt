@@ -1,0 +1,193 @@
+HTML
+
+What does "semantic markup" mean?
+*******
+Semantic Markup is markup that has meaning to both the reader and the browser.  i.e. instead of using <div class = "header">, semantically that would be written as <header>
+*******
+
+What does a doctype do?
+********
+It declares how the document HTML is rendered.  For example, <!DOCTYPE html> defines the document as an HTML5 standard webpage.
+********
+Explain what standards and standards bodies are and why they are important.
+***********
+Web standards are the universally accepted technical specifications of the world wide web.  (Also closely related, best practices.)  Standards bodies are groups that set the standards of the web, such as W3C or ECMA.
+**********
+
+What are CSS3 and HTML5? How are they different from previous standards? Why is this important?
+CSS
+*********
+CSS3 is the latest version of CSS, which brings a lot of fun aspects to the table, such as animations, transitions, gradients, etc. HTML5 is the latest version of HTML, featuring the semantic markup mentioned above and includes multimedia aspects via the <canvas>, <video> and <audio> tags.  The two play nicely together for animating objects in a web document
+*********
+
+What does a CSS reset do and why is it useful?
+**********
+Every browser has their own standards on how they believe that a document should be displayed in the browser.  When a CSS reset is used, it changes the browser's specifications to the ones that you have set forth in the reset document for that page.
+**********
+
+What is the box model? Draw a picture and label the portions here.
+*************
+(ed. note: this is going to be hard in a text document.)
+  |--------------------------|
+  | margin (all 4 sides)     |
+  |  _____________________   |
+  |  | padding (4 sides)  |  |
+  |  | ================== |  |
+  |  | |^border (4 sides)||  |
+  |  | |                 ||  |
+  |  | | <section>       ||  |
+  |  | |=================||  |
+  |  |____________________|  |
+  |--------------------------|
+
+  The box model consists of four parts: the actual item (a div, a section, a header, etc), with an optional border around that, then an optional padding area, then the optional margin.  Currently the standard is that the box model builds on top of itself, so that the item is surrounded by extra space for the border, padding and margin rather than a set box model with constraints. If you would like the reverse to be true, use the border-box box sizing model, which inverses the area of the item being bordered, padded and margined.
+
+  Also to note, padding makes an item bigger, but margin separates items from each other in a web page.
+*************
+
+What is the difference between a relative, fixed, absolute, and statically positioned element? Feel free to draw pictures to explain your answer.
+*************
+Positioning is set as such: 
+Fixed: The element's position is relative to the browser window itself
+Relative: The element is positioned relative to its normal position.  It does not change the layout of the document.
+Absolute: The element is positioned relatively to closest positioned ancestor.
+Static: Use the normal behavior of the element, meaning it can't be adjusted up, down, right or left.
+
+The way I think of it is as such: Fixed positions are relative to the browser, meaning I'd use this for elements that I want to anchor to the constraints of the browser.  Relative positioning, in my view, is kind of like an overlay on a fixed element (or the browser), and then I can move elements around wherever I'd like to see them.  Say over to the left or right, up or down- but they're really not moving.  Absolute positioning is like an overlay on the whatever the last element was- so if its fixed, absolute might work more like relative positioning, but if the ancestor is relative, this gives even more flexibility for appearance.
+*************
+
+What is SASS and why do people use it?
+*********
+SASS stands for "Syntactically Awesome Style Sheets" and I concur, its the best!
+
+Personal preferences aside, SASS is a CSS precompilation tool.  It is open source, built in Ruby, and allows the user to create variables and mixins for commonly used parameters in CSS (e.g. colors, padding, margins).
+
+A variable is a handy way to store and reuse snippets of code in a stylesheet, such as this:
+
+$dark-blue: #556afa.
+
+From there, call it wherever you want!  Like this!
+
+body {
+	color: $dark-blue;
+	font-family: arial, helvetica, sans-serif;
+}
+
+Mixins are more complex.  They're handy for pieces of code that handle things like vendor prefixes, such as this:
+
+@mixin transition($transition){
+	 -webkit-transition: $transition;
+     -moz-transition: $transition;
+      -ms-transition: $transition;
+          transition: $transition;
+}
+
+....and then you can call them like this:
+
+.circle (@include transition(500ms);)
+
+SASS also allows for nesting with CSS elements, which makes things handy in terms of organization and heirchy.  You should not go more than three deep on this though.
+
+********
+Name one feature of SASS and explain why it is helpful.
+*********
+See above.  Personally, I love variables, I use them all over the place.  Its so much easier and more readable to write a color name or a sizing element on a whim- and if I need to make sweeping changes, I can change one thing at the top of my document, not have to find and replace all.
+
+Also, I personally love sass --watch myCss.scss:myCss.css, it makes updating and live previewing a snap.
+
+*********
+
+JS
+(ed note: Yaaaaaas!)
+
+Explain prototypal inheritance.
+********
+Prototypical inheritance is how JS objects get their properties.  When an object is created in JavaScript, internally each objects has a link to its ancestors- known as a prototype.  This object inherits from its ancestor, so on and so forth, until the buck stops at the global object or null, whichever property is defined first.
+
+Here's an example of what that would look like:
+
+var myObject = {
+	'name': 'Hannah',
+	'shoe size': 10
+}
+
+console.log(myObject.middlename)
+//=> undefined
+
+As we can see, this doesn't work for a variety of reasons.  One, there's no global prototype to inherit from in this case- and I didn't set it to begin with.  But if I did have middle name set in the object and wanted to use it in another object, this would show how this might work:
+
+var myObject = {
+	'name': 'Hannah',
+	'shoe size': 10,
+	'middlename': 'Brie Zoe'
+}
+
+function sayMyName(myObject){
+	console.log('Say My Name, Say My Name... (' + myObject.name + ' ' + myObject.middlename + ' ' + 'Nordgren)' );
+	console.log('When nobody is around, say JavaScript I love you.');
+}
+
+sayMyName(myObject);
+
+
+
+********
+
+What is a closure and how/why would you use one?
+********
+A closure is a function that refers to free variables and remembers it.  Like this:
+
+function slowLoris(){
+	var lastWord = 'Cute Overload!';
+	function haveTheLastWord(){
+		alert(lastWord);
+	}
+	haveTheLastWord();
+}
+
+slowLoris();
+
+In the haveTheLastWord function, the closure we are referring to is lastWord.  Then, outside of function haveTheLastWord the functionis called, and lastly slowLoris is called as well.  Also, Slow Lorises are hella cute. 
+
+
+********
+
+What is an anonymous function? Give a typical usecase for one.
+********
+Functions are blocks of code that are executed.  An anonymous function is one that has been described as such:
+
+function(){
+	//do something here;
+}
+
+as opposed to one with an identifier:
+
+function myFunction(){
+	//do something here;
+}
+
+Oftentimes, I'll use them in cases where I'm waiting for an event to trigger an action.  Such as this:
+
+document.getElementById('btn').click(function(){
+	console.log('you clicked the button!');
+});
+
+********
+
+Describe the difference between
+function Person(){}
+var person = Person()
+var person = new Person()
+**********
+The first one is a named function.  The second one is calling the first function with a new variable name to identify it with.  The last one is creating a new Person with the variable name of person
+**********
+
+Explain hoisting.
+*********
+Hoisting is when elements in the body of a function or a script are read first, then executed.  Variables are hoisted, no matter where they are defined (even within functions).  Thus, its best to define variables at the top of the scope in which they'll be used, as that's where they're going to be read first anyways.
+*********
+
+What is the difference between === and ==?
+*********
+These both test for equality between two operands.  In the first type, strict mode (===), the two operands to be compared must be the same type and have the same value.  In non-strict equality (==), the two operands simply need to be the same type.  You can also see more about that on my blog: http://anunorderedlistapart.tumblr.com/post/77922492125/javascript-operators-were-all-equal-here.
+*********
